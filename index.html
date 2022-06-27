@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/output.css" />
+    <title>Nyobak Tailwind 3.1</title>
+</head>
+
+<body>
+    <h1 class="text-5xl text-biru">Nyobak TailwindCSS 3.1</h1>
+
+    <div class="kotak"></div>
+
+    <!-- Membuat tema warna -->
+    <!-- npx tailwindcss -i ./src/input.css -o ./css/output.css --watch -->
+
+    <div class="flex items-center justify-center h-88 bg-gray-100">
+        <div class="px-8 py-6 mt-4 text-left shadow-lg rounded-md bg-tema/10">
+            <h3 class="text-2xl font-bold text-center text-tema/100">My Form</h3>
+            <form action="">
+                <div class="mt-4">
+                    <div>
+                        <label class="block text-tema/80" for="email">Email</label>
+                        <input type="text" placeholder="masukkan email anda ..." class="text-sm w-full px-4 py-2 mt-2 border rounded-md transition ease-in-out foucs:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-tema/60" />
+                    </div>
+                    <div class="flex items-baseline justify-center">
+                        <button class="px-6 py-2 mt-4 text-white transition ease-in-out bg-tema/80 rounded-md hover:bg-tema/90">Kirim</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Border Spacing -->
+    <div class="px-4 py-8 sm:px-8">
+        <table class="w-full text-sm border-separate">
+            <thead class="bg-slate-100 dark:bg-slate-700">
+                <tr class="text-center">
+                    <th class="w-1/2 border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200">Provinsi</th>
+                    <th class="w-1/2 border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200">Ibu Kota</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white"></tbody>
+        </table>
+    </div>
+
+    <!-- Arbitrary variants -->
+    <ul class="w-2/3 m-auto [&>*]:bg-pink-100 [&>*]:text-pink-700 [&>li:nth-child(3)]:bg-sky-100 [&>li:nth-child(4)>div>span:nth-child(2)]:bg-emerald-400 [&>li:nth-child(4):hover>div>span:nth-child(2)]:bg-emerald-900">
+        <li class="bg-teal-100 rounded-lg py-3 px-6 mb-2 text-baseline text-teal-700 text-center">Items 1</li>
+        <li class="bg-teal-100 rounded-lg py-3 px-6 mb-2 text-baseline text-teal-700 text-center">Items 2</li>
+        <li class="bg-teal-100 rounded-lg py-3 px-6 mb-2 text-baseline text-teal-700 text-center">Items 3</li>
+        <li class="bg-teal-100 rounded-lg py-3 px-6 mb-2 text-baseline text-teal-700 text-center">
+            <div>
+                <span class="inline-block w-10 h-10 bg-sky-400"></span>
+                <span class="inline-block w-10 h-10 bg-sky-400"></span>
+                <span class="inline-block w-10 h-10 bg-sky-400"></span>
+            </div>
+        </li>
+        <li class="bg-teal-100 rounded-lg py-3 px-6 mb-2 text-baseline text-teal-700 text-center">Items 5</li>
+    </ul>
+</body>
+
+</html>
